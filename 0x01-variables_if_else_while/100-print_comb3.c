@@ -10,12 +10,15 @@
 
 int main(void)
 {
-	int n;
+	int n, j;
 
-	for (n = 10; n <= 99; n++)
+	for (n = 0; n <= 8; n++)
+		for (j = n + 1; j <= 9; ++j)
 	{
-		putchar(n + '0');
-		if (n < 99)
+		putchar('0' + n);
+		putchar('0' + j);
+
+		if (n < 8 || j < 9)
 		{
 			putchar(',');
 			putchar(' ');
